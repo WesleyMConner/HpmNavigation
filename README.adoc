@@ -2,11 +2,10 @@
 The following manifest files are required by the HPM ecosystem.
 
 Master Manifest::
-  See https://hubitatpackagemanager.hubitatcommunity.com/masterManifest.html[Master Manifest Example] and `wesmcMasterManifest.json` locally.
+  See https://hubitatpackagemanager.hubitatcommunity.com/masterManifest.html[Master Manifest Example] and `hpmMasterManifest.json` locally.
 
-Intermediate Manifest Format::
-  See https://hubitatpackagemanager.hubitatcommunity.com/intermManifest.html[Intermediate Manifest Example] and `wesmcIntermediateManifest.json` locally.
+Repository (Intermediate Manifest)::
+  See https://hubitatpackagemanager.hubitatcommunity.com/intermManifest.html[Intermediate Manifest Example] and `hpmRepository.json` locally.
 
 Package Manifest Format::
-  See https://hubitatpackagemanager.hubitatcommunity.com/pkgManifest.html[Package Manifest Example]. HPM leaf components provide a manifest file. 
-
+  Each HPM Package has its own repository - which contains the per-package Manifest file. See https://hubitatpackagemanager.hubitatcommunity.com/pkgManifest.html[Package Manifest Example]. 
