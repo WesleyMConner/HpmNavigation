@@ -1,0 +1,13 @@
+{
+  "author": "Wesley M. Conner",
+  "gitHubUrl": "https://github.com/WesleyMConner",
+  "payPalUrl": "paypal.me/wesmcPH",
+  "packages": [
+    {
+      "name": "WesMC-UtilsLibrary",
+      "location": "=====> lUtilsHpmManifest.json <=====",
+      "category": "Convenience",
+      "description": "General functions leveraged in downstream applications",
+    }
+  ]
+}
