@@ -4,10 +4,12 @@
   "payPalUrl": "paypal.me/wesmcPH",
   "packages": [
     {
+      "id": "bd3f19e0-ccfb-4f24-8d7c-f0eebc47a8cb",
       "name": "WesMC-UtilsLibrary",
-      "location": "https://github.com/WesleyMConner/Hubitat-UtilsLibrary/blob/main/WesMC-UtilsLibrary.json",
       "category": "Convenience",
-      "description": "General functions leveraged in downstream applications"
+      "location": "https://raw.githubusercontent.com/WesleyMConner/Hubitat-UtilsLibrary/main/WesMC-UtilsLibrary.json",
+      "description": "General-purpose functions leveraged in downstream WesMC applications",
+      "descriptive": "<ul><li><b>INSTALLS</b>: lUtils (library), Demo-Utils (app)</li><li><b>UTILS:</b> safeParseInt(), cleanStrings(), modeNames(), switchState()</li><li><b>LOGGING</b>: setLogLevel(), logTrace(), logDebug(), logInfo(), logWarn(), logError()</li><li><b>HTML</b>: h1(), h2(), h3(), bullet1(), bullet2(), b(), i(), bi()</li><li><b>DEBUGGING</b>: eventDetails()</li></ul>"
     }
   ]
 }
