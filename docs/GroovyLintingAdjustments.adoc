@@ -1,6 +1,10 @@
 // cSpell:ignore codenarc groovylintrc nvuillam sandboxed
 = Groovy Linting Adjustments
 
+WARNING: The `nvuillam / vscode-groovy-lint` (vscode-groovy-lint) DOES NOT
+appear to be stable in code-server when operating on a workspace. Sporadic issues
+also appear running command line `npm-groovy-lint`.
+
 When using the code-server plugin `nvuillam / vscode-groovy-lint` (vscode-groovy-lint),
 which in turn uses `codenarc`, some adjustments are made primarily due to the
 limitations that arise in Hubitat's sandboxed Groovy.
