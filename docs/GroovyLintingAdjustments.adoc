@@ -1,0 +1,38 @@
+// cSpell:ignore codenarc groovylintrc nvuillam sandboxed
+= Groovy Linting Adjustments
+
+When using the code-server plugin `nvuillam / vscode-groovy-lint` (vscode-groovy-lint),
+which in turn uses `codenarc`, some adjustments are made primarily due to the
+limitations that arise in Hubitat's sandboxed Groovy.
+
+== Disable Formatting
+
+In `hubitat.code-workspace` (or per-project in `.vscode/settings.json` if not
+using a workspace):
+
+.DISABLE FORMATTING
+````
+  "groovyLint.format.enable": false,
+  "groovyLint.format.useDocumentIndentSize": false
+````
+
+Adjust ".groovylintrc.json" due to Hubitat Sandbox limitations.
+
+        "ImplementationAsType": {
+            "enabled": false
+        },
+        "CompileStatic": {
+            "enabled": false
+        },
+        "Indentation": {
+            "enabled": false
+        },
+
+Tolerate the following errors:
+
+  - "Unexpected character '#' arises when a Hubitat App includes a Hubitat library
+    DO NOT DISABLE THE PARSE ERROR, THAT IS OVERKILL
+
+        "NglParseError": {
+            "enabled": true
+        },
