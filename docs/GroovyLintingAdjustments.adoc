@@ -102,21 +102,37 @@ Adjust all VsCode/code-server workspace/repository configuration(s) to prevent g
 The type ArrayList should be replaced with an interface or more general parent class::
 ```
 "ImplementationAsType": {
-  "enabled": false           // Not possible in a sandboxed environment
+  "enabled": false         // Not possible in a sandboxed environment
 },
 ```
 
 Class should be marked with one of @GrailsCompileStatic, @CompileStatic or @CompileDynamic::
 ```
 "CompileStatic": {
-  "enabled": false           // Not possible in a sandboxed environment
+  "enabled": false         // Not possible in a sandboxed environment
+},
+```
+
+Map [filterEvents:true] is duplicated::
+```
+"DuplicateMapLiteral": {   // See default treatment for Number and String
+  "enabled": false         // No Hubitat static|global alternative
 },
 ```
 
 The statement on line ## ... is at the incorrect indent level ...::
 ```
 "Indentation": {
-  "enabled": false           // Conflicts with VsCode
+  "enabled": false         // Conflicts with VsCode
+},
+```
+
+=== Tolerate Some Noise
+
+Unexpected character: '\#' @ line ##, column 1::
+```
+"NglParseError": {
+  "enabled": true          // Each #include generates a false positive
 },
 ```
 
