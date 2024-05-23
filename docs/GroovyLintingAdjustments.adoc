@@ -1,42 +1,72 @@
-// cSpell:ignore codenarc groovylintrc nvuillam sandboxed
-= Groovy Linting Adjustments
+// cSpell:ignore codenarc groovylintrc nvuillam println sandboxed shellenv
+= Groovy & Groovy Linting
 
-WARNING: The `nvuillam / vscode-groovy-lint` (vscode-groovy-lint) DOES NOT
-appear to be stable in code-server when operating on a workspace. Sporadic issues
-also appear running command line `npm-groovy-lint`.
+== Introduction
+Limitations Inherent to Groovy::
+* Groovy is not memory safe and not (run-time) type safe.
 
-When using the code-server plugin `nvuillam / vscode-groovy-lint` (vscode-groovy-lint),
-which in turn uses `codenarc`, some adjustments are made primarily due to the
-limitations that arise in Hubitat's sandboxed Groovy.
+Limitations of Hubitat's _Sandboxed_ Environment::
+* Imports are limited (see https://docs2.hubitat.com/en/developer/allowed-imports[Allowed Imports])
+* Some Groovy methods have Hubitat alternatives:
+** `println()` → `log.trace()`, `logDebug()`, `logInfo()`, `logWarn()`, `logError()`
+** `sleep()` → `pauseExecution()`
+* Custom classes, custom JARs and thread creation are not possible (see https://docs2.hubitat.com/en/developer/overview[Developer Overview]).
+* Class-like instances can be simulated (see https://TBD[Class-Like Constructs])
 
-== Disable Formatting
+Groovy Linting in Hubitat::
+* Linting is possible with adjustments for Hubitat's _sandboxed_ environment.
+* Some issues have been reported with the `nvuillam / vscode-groovy-lint` (vscode-groovy-lint) extension. The issues *may* be more significant when using `code-server` and/or using a multi-repo workspace.
 
-In `hubitat.code-workspace` (or per-project in `.vscode/settings.json` if not
-using a workspace):
+== Linting Adjustments for Hubitat's Sandbox
+The following adjustments are relative to https://github.com/nvuillam/npm-groovy-lint/blob/14e2649ff7ca642dba3e901c17252b178bea8b1b/.groovylintrc.json[`nvuillam/npm-groovy-lint/.groovylintrc.json`].
 
-.DISABLE FORMATTING
-````
+== P A R K E D
+
+```
   "groovyLint.format.enable": false,
   "groovyLint.format.useDocumentIndentSize": false
-````
+```
 
-Adjust ".groovylintrc.json" due to Hubitat Sandbox limitations.
+Disable linting of functionality that is not possible in Hubitat's sandboxed environment.
 
-        "ImplementationAsType": {
-            "enabled": false
-        },
-        "CompileStatic": {
-            "enabled": false
-        },
-        "Indentation": {
-            "enabled": false
-        },
+```
+  "ImplementationAsType": {
+    "enabled": false
+  },
+  "CompileStatic": {
+    "enabled": false
+  },
+  "Indentation": {
+    "enabled": false
+  },
+```
 
-Tolerate the following errors:
+DO NOT disable `NglParseError`. The linter will report `Unexpected character '#'` when a Hubitat App #includes a Hubitat library. Disabling `NglParseError` would be overkill.
 
-  - "Unexpected character '#' arises when a Hubitat App includes a Hubitat library
-    DO NOT DISABLE THE PARSE ERROR, THAT IS OVERKILL
+```
+  "NglParseError": {
+    "enabled": true
+  },
+```
 
-        "NglParseError": {
-            "enabled": true
-        },
+== Command-Line Linting on MacOS
+
+Install Homebrew::
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Configure Brew in `~/.zprofile`::
+```
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+Install NVM, Node and Groovy Lint::
+```
+brew install nvm
+nvm install node
+npm install -g npm-groovy-lint
+```
+Command-line Linting::
+```
+npm-groovy-lint <target file | target directory>
+```
