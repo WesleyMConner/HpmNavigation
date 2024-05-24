@@ -8,4 +8,5 @@ Repository (Intermediate Manifest)::
   See https://hubitatpackagemanager.hubitatcommunity.com/intermManifest.html[Intermediate Manifest Example] and `hpmRepository.json` locally.
 
 Package Manifest Format::
-  Each HPM Package has its own repository - which contains the per-package Manifest file. See https://hubitatpackagemanager.hubitatcommunity.com/pkgManifest.html[Package Manifest Example].
+  Each HPM Package has its own repository - which contains the per-package Manifest file. See https://hubitatpackagemanager.hubitatcommunity.com/pkgManifest.html[Package Manifest Example]. +
+  - See also https://raw.githubusercontent.com/HubitatCommunity/hubitat-packagerepositories/master/settings.json[List of Categories and Tags]
