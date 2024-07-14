@@ -4,7 +4,7 @@
   "payPalUrl": "paypal.me/wesmcPH",
   "packages": [
     {
-      "id": "bd3f19e0-ccfb-4f24-8d7c-f0eebc47a8cb",
+      "id": "efadea22-e44c-4dc4-a73e-3ac4d975e12a",
       "name": "WesMC-UtilsLibrary",
       "category": "Convenience",
       "location": "https://raw.githubusercontent.com/WesleyMConner/Hubitat-UtilsLibrary/main/WesMC-UtilsLibrary.json",
