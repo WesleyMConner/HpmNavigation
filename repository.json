@@ -8,8 +8,16 @@
       "name": "WesMC-UtilsLibrary",
       "category": "Convenience",
       "location": "https://raw.githubusercontent.com/WesleyMConner/Hubitat-UtilsLibrary/main/WesMC-UtilsLibrary.json",
-      "description": "General-purpose functions leveraged in downstream WesMC applications",
-      "descriptive": "<ul><li><b>INSTALLS</b>: lUtils (library), Demo-Utils (app)</li><li><b>UTILS:</b> safeParseInt(), cleanStrings(), modeNames(), switchState()</li><li><b>LOGGING</b>: setLogLevel(), logTrace(), logDebug(), logInfo(), logWarn(), logError()</li><li><b>HTML</b>: h1(), h2(), h3(), bullet1(), bullet2(), b(), i(), bi()</li><li><b>DEBUGGING</b>: eventDetails()</li></ul>"
+      "description": "General-purpose functions leveraged in downstream WesMC Apps and Devices",
+      "descriptive": "<a href='https://raw.githubusercontent.com/WesleyMConner/Hubitat-UtilsLibrary/main/README.adoc'>"
+    },
+    {
+      "id": "0f1c3181-1c96-4b88-bf48-8120bde75648",
+      "namespace": "WesMC",
+      "category": "Control",
+      "location": "https://raw.githubusercontent.com/WesleyMConner/Hubitat-PBSGDevice/main/WesMC-PBSGDevice.json",
+      "description": "Virtual keypad w/ mutually-exclusive buttons, an optional default button and synchronized child virtual switches.",
+      "descriptive": "<a href='https://raw.githubusercontent.com/WesleyMConner/Hubitat-PBSGDevice/main/README.adoc'>"
     }
   ]
 }

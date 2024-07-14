@@ -6,4 +6,5 @@ ignorePaths:
   - .vscode
 words:
   - hubitat
+  - pbsg
   - wesmc
