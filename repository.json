@@ -4,14 +4,15 @@
   "payPalUrl": "paypal.me/wesmcPH",
   "packages": [
     {
+      "name": "WesMC Utils Library",
       "id": "efadea22-e44c-4dc4-a73e-3ac4d975e12a",
-      "name": "WesMC-UtilsLibrary",
       "category": "Convenience",
       "location": "https://raw.githubusercontent.com/WesleyMConner/Hubitat-UtilsLibrary/main/WesMC-UtilsLibrary.json",
       "description": "General-purpose functions leveraged in downstream WesMC Apps and Devices",
       "descriptive": "<a href='https://raw.githubusercontent.com/WesleyMConner/Hubitat-UtilsLibrary/main/README.adoc'>"
     },
     {
+      "name": "Push Button Switch Group (PBSG)",
       "id": "0f1c3181-1c96-4b88-bf48-8120bde75648",
       "namespace": "WesMC",
       "category": "Control",
