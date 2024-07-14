@@ -18,8 +18,8 @@
       "category": "Control",
       "tags": ["Buttons", "Lights & Switches", "Misc. Devices", "Tools & Utilities"],
       "location": "https://raw.githubusercontent.com/WesleyMConner/Hubitat-PBSGDevice/main/WesMCPBSGDevice.json",
-      "description": "Virtual keypad with mutually-exclusive buttons, an optional default button and synchronized child virtual switches.",
-      "descriptive": "<a href='https://raw.githubusercontent.com/WesleyMConner/Hubitat-PBSGDevice/main/README.adoc'>"
+      "description": "Create virtual keypads with mutually-exclusive buttons and corresponding virtual switches.",
+      "descriptive": "<b>Device Behavior</b><ul><li>Create a <b>Virtual Keypad</b> with 1..N named buttons</li><li>Each button has a synchronized child <b>Virtual Switch with Toggle (VSWT)</b></li><li>Only one <b>Button/VSWT</b> is <b>active/on()</b> at any time</li><li><em>Optionally:</em> Select a <b>Default Button/VSWT</b> <em>(activates if no peers are active)</em></li></ul><b>Keypad Methods</b><ul><li>configPbsg(String jsonPrefs)  // Set|Adjust <b>Preferences</b> programmatically</li><li>activate(String button)</li><li>deactivate(String button)</li><li>push(Integer buttonNumber)  // Toggle <b>Button/VSWT</b></li></ul><b>Child Device Methods</b><ul><li>on()  // activates corresponding button</li><li>off()  // deactivates corresponding button</li><li>push()  // toggles corresponding button</li></ul><b>Special Features</b><ul><li>Tracks the state of PBSG instances in a <b>ConcurrentHashMap</b>.</li>  <li>Each PBSG uses a <b>SynchronousQueue</b> to ensure async FIFO execution.</li></ul>",
     }
   ]
 }
