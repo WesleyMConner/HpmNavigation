@@ -4,20 +4,20 @@
   "payPalUrl": "paypal.me/wesmcPH",
   "packages": [
     {
-      "name": "Utils Library & Demo",
+      "name": "WesMC Utils Bundle",
       "id": "efadea22-e44c-4dc4-a73e-3ac4d975e12a",
       "category": "Convenience",
       "tags": ["Tools & Utilities"],
-      "location": "https://raw.githubusercontent.com/WesleyMConner/Hubitat-UtilsLibrary/main/WesMCUtilsLibrary.json",
+      "location": "https://raw.githubusercontent.com/WesleyMConner/WesMC-Utils-Bundle/main/WesMC-Utils-Bundle.json",
       "description": "General-purpose functions leveraged in downstream WesMC Apps & Devices",
       "descriptive": "<a href='https://raw.githubusercontent.com/WesleyMConner/Hubitat-UtilsLibrary/main/README.adoc'>"
     },
     {
-      "name": "Push Button Switch Group (PBSG) Device",
+      "name": "Push Button Switch Group (PBSG) Bundle",
       "id": "0f1c3181-1c96-4b88-bf48-8120bde75648",
       "category": "Control",
       "tags": ["Buttons", "Lights & Switches", "Misc. Devices", "Tools & Utilities"],
-      "location": "https://raw.githubusercontent.com/WesleyMConner/Hubitat-PBSGDevice/main/WesMCPBSGDevice.json",
+      "location": "https://raw.githubusercontent.com/WesleyMConner/WesMC-PBSG-Bundle/main/WesMC-PBSG-Bundle.json",
       "description": "Create virtual keypads with mutually-exclusive buttons and corresponding virtual switches.",
       "descriptive": "<b>Device Behavior</b><ul><li>Create a <b>Virtual Keypad</b> with 1..N named buttons</li><li>Each button has a synchronized child <b>Virtual Switch with Toggle (VSWT)</b></li><li>Only one <b>Button/VSWT</b> is <b>active/on()</b> at any time</li><li><em>Optionally:</em> Select a <b>Default Button/VSWT</b> <em>(activates if no peers are active)</em></li></ul><b>Keypad Methods</b><ul><li>configPbsg(String jsonPrefs)  // Set|Adjust <b>Preferences</b> programmatically</li><li>activate(String button)</li><li>deactivate(String button)</li><li>push(Integer buttonNumber)  // Toggle <b>Button/VSWT</b></li></ul><b>Child Device Methods</b><ul><li>on()  // activates corresponding button</li><li>off()  // deactivates corresponding button</li><li>push()  // toggles corresponding button</li></ul><b>Special Features</b><ul><li>Tracks the state of PBSG instances in a <b>ConcurrentHashMap</b>.</li>  <li>Each PBSG uses a <b>SynchronousQueue</b> to ensure async FIFO execution.</li></ul>"
     }
