@@ -1,0 +1,22 @@
+{
+  "packageName": "Wmc Utils",
+  "author": "Wesley M. Conner",
+  "version": "1.0.0",
+  "releaseNotes": "Inaugural release.",
+  "dateReleased": "2024-07-19",
+  "minimumHEVersion": "2.3.9.160",
+  "documentationLink": "https://raw.githubusercontent.com/WesleyMConner/WmcUtil/main/README.adoc",
+  "tags": [ "Tools & Utilities" ],
+  "bundles" : [
+		{
+      "id": "efadea22-e44c-4dc4-a73e-3ac4d975e12a",
+      "name": "Wmc Utils Bundle",
+      "namespace": "Wmc",
+      "category": "Convenience",
+      "tags": ["Tools & Utilities"],
+      "location": "https://raw.githubusercontent.com/WesleyMConner/WmcUtil/main/WmcUtilsLibrary_Bundle.zip",
+      "description": "General-purpose functions leveraged in downstream Wmc Apps & Devices",
+      "required": true
+		}
+	]
+}

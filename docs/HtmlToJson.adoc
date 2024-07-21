@@ -3,5 +3,5 @@
 . Open: https://onecompiler.com/groovy\
 . Paste in *[HpmNavigation/htmlToJson.groovy]*
 . Replace the string *[<INSERT HTML HERE>]* with an HTML fragment. +
-Example: *[WesMC-Utils-Bundle/docs/HPM-Descriptive.html]*
+Example: *[Wmc-Utils-Bundle/docs/HPM-Descriptive.html]*
 . Click the *[Run]* button.

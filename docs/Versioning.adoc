@@ -1,0 +1,9 @@
+= Hubitat Version Management Challenges
+
+* Hubitat tracks the relationship between instantiated *Apps & Devices* and their association with *Apps Code*, *Drivers Code* and *Libraries Code*.
+
+* *Hubitat Bundles* can include *Apps Code*, *Drivers Code* and *Libraries Code*.
+
+* Hubitat *DOES NOT* provide version control of *Apps Code*, *Drivers Code* or *Libraries Code*.
+
+* The only way for multiple versions of code (App, Driver or Library) to coexist is to create a distinct file (filename) per version.

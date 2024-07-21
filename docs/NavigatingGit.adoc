@@ -1,0 +1,15 @@
+= Navigating Git
+Material from https://stackoverflow.com/questions/39065921
+
+github.com::
+Pages (irrespective of file extension) are typically presented for Web Browser consumption. +
+https://GitHub.com/${user}/${repo}/${branch}/${path}/${filename}
+
+raw.githubusercontent.com::
+Returns the raw content of files stored in github - suitable for download. +
+https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}/${filename}
+
+Binary Large Object (blob)::
+
+Per https://docs.github.com/en/rest/git/blobs?apiVersion=2022-11-28[GitHub Blobs]: _"The object type used to store the contents of each file in a repository. The file's SHA-1 hash is computed and stored in the blob object. These endpoints allow you to read and write blob objects to your Git database on GitHub."_ +
+https://github.com/${user}/${repo}/blob/${branch}/${path}/${filename}
